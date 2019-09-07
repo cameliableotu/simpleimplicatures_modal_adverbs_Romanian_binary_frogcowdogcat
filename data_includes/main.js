@@ -2480,7 +2480,7 @@ PennController ("experiment",
 		,
 		newText ("<p> Puiul de dragon: Sigur că este câinele roşu.</p>")
 		,
-		newText ("<p> Cum vei răsplăti puiul de dragon> </p>")
+		newText ("<p> Cum vei răsplăti puiul de dragon? </p>")
 		,
 	       newImage("bigapple", "bigapple.png")
         .settings.size(200,200)
