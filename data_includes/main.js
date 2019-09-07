@@ -2053,7 +2053,7 @@ PennController("experiment" ,
 	       
 	      )	
 ;
-ennController("experiment" ,
+PennController("experiment" ,
 	    defaultText
 	        .print()
 	       ,
