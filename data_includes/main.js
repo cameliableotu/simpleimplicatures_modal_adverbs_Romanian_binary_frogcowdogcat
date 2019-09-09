@@ -338,7 +338,7 @@ PennController ("experiment",
 		newImage ("cowshadowallcows", "cowshadowallcows.png")
                .print ()
 		,
-		newAudio("cowsounds", "cowsounds.mp3")
+		newAudio("cowsounds2sec", "cowsounds2sec.mp3")
 		.play()
 		,
 
@@ -490,7 +490,7 @@ PennController("experiment" ,
 	     newImage ("cowshadowonecowonstage", "cowshadowonecowonstage.png")
                .print ()
 	       ,
-	       newAudio("cowsounds", "cowsounds.mp3")
+	       newAudio("cowsounds2sec", "cowsounds2sec.mp3")
 		.play(),
 	       
 	       newKey(" ")
@@ -506,7 +506,7 @@ PennController ("experiment",
 		newImage ("cowshadowonecowonstage", "cowshadowonecowonstage.png")
                .print ()
 		,
-		newAudio("cowsounds", "cowsounds.mp3")
+		newAudio("cowsounds2sec", "cowsounds2sec.mp3")
 		.play()
 		,
 		newText ("<p> Puiul de dragon: Sigur că este vaca verde.</p>")
@@ -708,7 +708,7 @@ PennController("experiment" ,
 	     newImage ("cowshadowtwocowsonstage", "cowshadowtwocowsonstage.png")
                .print ()
 	       ,
-	       newAudio("cowsounds", "cowsounds.mp3")
+	       newAudio("cowsounds2sec", "cowsounds2sec.mp3")
 		.play()
 	       ,
 	       newKey(" ")
@@ -724,7 +724,7 @@ PennController ("experiment",
 		newImage ("cowshadowtwocowsonstage", "cowshadowtwocowsonstage.png")
                .print ()
 		,
-		newAudio("cowsounds", "cowsounds.mp3")
+		newAudio("cowsounds2sec", "cowsounds2sec.mp3")
 		.play()
 		,
 		newText ("<p> Puiul de dragon: Poate că este vaca verde.</p>")
@@ -858,7 +858,7 @@ PennController("experiment" ,
 	     newImage ("greencowrevealedonstage.jpg")
                .print ()
 	       ,
-	       newAudio("cowsounds", "cowsounds.mp3")
+	       newAudio("cowsounds2sec", "cowsounds2sec.mp3")
 		.play()
 		,
 	       newKey(" ")
