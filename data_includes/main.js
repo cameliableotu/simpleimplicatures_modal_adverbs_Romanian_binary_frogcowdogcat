@@ -2630,7 +2630,7 @@ PennController( "final" ,
 	       ,
 	 newText("<p> Puiul de dragon îţi mulţumeşte pentru mere şi la fel şi vrăjitorul! Pa-pa! </p>")
         .print(),
-    newButton("void")
+    newButton("void") 
         .wait()
 	       )
 
