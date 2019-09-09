@@ -234,7 +234,24 @@ PennController("introductionanimals" ,
 	    defaultText
 	        .print()
 	    ,
-	    newText ("<p> Hai acum să facem cunoştinţă cu celelalte animale din spectacol. Avem un grup de trei vaci. </p>")
+	    newText ("<p> Hai acum să facem cunoştinţă cu celelalte animale din spectacol. Avem un grup de trei broaşte. </p>")
+	    ,
+	                  
+	     newImage ("threefrogs.png")
+               .print ()
+	       ,
+	       newAudio("frogsounds2sec", "frogsounds2sec.mp3")
+		.play()
+	       ,
+	       newKey(" ")
+        .wait()
+	       )     
+;
+PennController("introductionanimals" ,
+	    defaultText
+	        .print()
+	    ,
+                 newText ("<p> Un grup de trei vaci. </p>")
 	    ,
 	                  
 	     newImage ("threecows.png")
@@ -251,7 +268,26 @@ PennController("introductionanimals" ,
 PennController("introductionanimals" ,
 	    defaultText
 	        .print(),
-	       newText ("<p> Un grup de trei pisici. </p>")
+	       newText ("<p> Un grup de trei câini. </p>")
+	    ,
+	                  
+	     newImage ("threedogs.png")
+               .print ()
+	       ,
+	       newAudio("barking", "barking.mp3")
+		.play()
+	       ,
+	       newKey(" ")
+        .wait()
+	      )
+; 
+
+PennController("introductionanimals" ,
+	    defaultText
+	        .print()
+	    ,
+	   
+	       newText ("<p> Şi un grup de trei pisici. </p>")
 	    ,
 	                  
 	     newImage ("threecats.png")
@@ -265,43 +301,592 @@ PennController("introductionanimals" ,
 	       
 	      )
 ;
-PennController("introductionanimals" ,
+PennController("experiment" ,
 	    defaultText
 	        .print()
-	    ,
-	   
-	       newText ("<p> Un grup de trei broaşte. </p>")
-	    ,
-	                  
+	       ,
+  newText ("<p> Toate broaştele s-au dus acum în spatele cortinei. <p>")
+	       ,
+  newText ("<p> Puiul de dragon trebuie să descrie a cui crede el că este umbra. </p>")
+	       ,
+   newText ("<p> Când puiul de dragon oferă cea mai bună descriere, trebuie să-l recompensezi cu un măr mare. </p>"), 
+   newText ("<p> Atunci când puiul de dragon nu oferă cea mai bună descriere, îi dai doar un măr mic. </p>")
+,
+	      newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       newKey(" ")
+        .wait()
+)
+;	
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newText ("<p> Hai să vedem ce spune puiul de dragon despre umbră.</p>")
+		,
+		newImage ("frogshadowallfrogs", "frogshadowallfrogs.png")
+               .print ()
+		,
+		newAudio("frogsounds2sec", "frogsounds2sec.mp3")
+		.play()
+		,
+
+		newText ("<p> Puiul de dragon: Poate că este un câine. </p>")
+	       ,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+		
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowallfrogs", "frogshadowallfrogs.png")
+               .print ()
+		,
+
+		newText ("<p> Puiul de dragon: Sigur că este o broască. </p>")
+	       ,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowallfrogs", "frogshadowallfrogs.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Sigur că este un câine. </p>")
+	       ,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowallfrogs", "frogshadowallfrogs.png")
+               .print ()
+		,
+
+		newText ("<p> Puiul de dragon: Poate că este o broască. </p>")
+	       ,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Foarte bine. Într-adevăr, umbra e a unei broaşte, a uneia din cele trei broaşte pe care le-ai văzut la început..</p>")
+	         ,         
 	     newImage ("threefrogs.png")
                .print ()
 	       ,
-	       newAudio("frogsounds2sec", "frogsounds2sec.mp3")
-		.play()
-	       ,
 	       newKey(" ")
         .wait()
-	       )     
-;
-
-PennController("introductionanimals" ,
-	    defaultText
-	        .print()
-	    ,
-	   
-	       newText ("<p> Şi un grup de trei câini. </p>")
-	    ,
-	                  
-	     newImage ("threedogs.png")
-               .print ()
-	       ,
-	       newAudio("barking", "barking.mp3")
-		.play()
-	       ,
-	       newKey(" ")
-        .wait()
+	       
 	      )
 ;
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Uite, broasca albastră a revenit în faţa cortinei, dar umbra este încă acolo, în lumina reflectoarelor. </p>")
+	          ,  
+	       newText ("<p> Deci umbra nu este broasca albastră! </p>")
+	       ,
+	     newImage ("frogshadowonefrogonstage","frogshadowonefrogonstage.png")
+               .print ()
+	       ,
+	       newAudio("frogsounds2sec", "frogsounds2sec.mp3")
+		.play(),
+	       
+	       newKey(" ")
+        .wait()
+	       
+	      )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newText ("<p> Hai să vedem ce spune puiul de dragon despre umbră. </p>")
+	       ,
+		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
+               .print ()
+		,
+		newAudio("frogsoundsshort", "frogsoundsshort.mp3")
+		.play()
+		,
+		newText ("<p> Puiul de dragon: Sigur că este broasca mov.</p>")
+		,
+		newText ("<p> Cum vei răsplăti puiul de dragon? </p>")
+			 ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Poate că este broasca roşie.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Sigur că este broasca albastră.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
+               .print ()
+		,
+
+		newText ("<p> Puiul de dragon: Poate că este broasca mov.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
+               .print ()
+	
+		,
+		newText ("<p> Puiul de dragon: Sigur că este broasca roşie.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowonefrogonstage","frogshadowonefrogonstage.png" )
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Poate că este broasca albastră.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Uite, broasca mov a revenit în faţa cortinei, alăturându-se broaştei albastre, dar umbra este încă acolo, în lumina reflectoarelor. </p>")
+	         ,         
+	       newText ("<p> Deci umbra nu este broasca mov! Şi nu este broasca albastră! </p>")
+	       ,
+	     newImage ("frogshadowtwofrogsonstage", "frogshadowtwofrogsonstage.png")
+               .print ()
+	       ,
+	       newAudio("frogsoundsshort", "frogsoundsshort.mp3")
+		.play()
+	       ,
+	       newKey(" ")
+        .wait()
+	       
+	      )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newText ("<p> Hai să vedem ce spune puiul de dragon despre umbră. </p>")
+		,
+		newImage ("frogshadowtwofrogsonstage", "frogshadowtwofrogsonstage.png")
+               .print ()
+		,
+		newAudio("frogsounds2sec", "frogsounds2sec.mp3")
+		.play()
+		,
+		newText ("<p> Puiul de dragon: Poate că este broasca mov.</p>")
+		,
+		newText ("<p> Cum vei răsplăti puiul de dragon? </p>")
+		,	 
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowtwofrogsonstage", "frogshadowtwofrogsonstage.png")
+               .print ()
+		,
+
+		newText ("<p> Puiul de dragon: Sigur că este broasca mov.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowtwofrogsonstage", "frogshadowtwofrogsonstage.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Poate că este broasca roşie.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("frogshadowtwofrogsonstage","frogshadowtwofrogsonstage.png")
+               .print ()
+		,
+		
+		newText ("<p> Puiul de dragon: Sigur că este broasca roşie. </p>")
+	       ,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Hai acum să vedem a cui este umbra. Pam-pam! Este broasca roşie! </p>")
+	         ,         
+	     newImage ("redfrogrevealedonstage.jpg")
+               .print ()
+	       ,
+	       newAudio("frogsounds2sec", "frogsounds2sec.mp3")
+		.play(),
+	       
+	       newKey(" ")
+        .wait()
+	       
+)
+;
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Hai să trecem acum la grupul vacilor. </p>")
+	    ,
+	                  
+	     newImage ("threecows.png")
+               .print ()
+	       ,
+	       newAudio("cowsounds2sec", "cowsounds2sec.mp3")
+		.play()
+		,
+	       newKey(" ")
+        .wait()
+	       
+	      )	
+;
+
 PennController("experiment" ,
 	    defaultText
 	        .print()
@@ -861,6 +1446,593 @@ PennController("experiment" ,
 	       newAudio("cowsounds2sec", "cowsounds2sec.mp3")
 		.play()
 		,
+	       newKey(" ")
+        .wait()
+	       
+)
+;
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Hai să trecem mai departe la grupul câinilor. </p>")
+	    ,
+	                  
+	     newImage ("threedogs.png")
+               .print ()
+	       ,
+	       newAudio("barking", "barking.mp3")
+		.play()
+		,
+	       newKey(" ")
+        .wait()
+	       
+	      )	
+;
+PennController("experiment" ,
+	    defaultText
+	        .print()
+	       ,
+  newText ("<p> Toţi câinii s-au dus acum în spatele cortinei. <p>")
+	       ,
+  newText ("<p> Puiul de dragon trebuie să descrie a cui crede el că este umbra. </p>")
+	       ,
+   newText ("<p> Când puiul de dragon oferă cea mai bună descriere, trebuie să-l recompensezi cu un măr mare. </p>"), 
+   newText ("<p> Atunci când puiul de dragon nu oferă cea mai bună descriere, îi dai doar un măr mic. </p>")
+,
+	      newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       newKey(" ")
+        .wait()
+)
+;	
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newText ("<p> Hai să vedem ce spune puiul de dragon despre umbră.</p>")
+		,
+		newImage ("dogshadowalldogs", "dogshadowalldogs.png")
+               .print ()
+		,
+		newAudio("barking", "barking.mp3")
+		.play()
+		,
+
+		newText ("<p> Puiul de dragon: Sigur că este un câine. </p>")
+	       ,
+	        newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	       ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+		
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowalldogs", "dogshadowalldogs.png")
+               .print ()
+		,
+	
+		newText ("<p> Puiul de dragon: Poate că este o pisică. </p>")
+	       ,
+	      newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	       ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowalldogs", "dogshadowalldogs.png")
+               .print ()
+		,
+
+	       newText ("<p> Puiul de dragon: Sigur că este o pisică. </p>")
+	       ,
+	       newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	       ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowalldogs", "dogshadowalldogs.png")
+               .print ()
+		,
+
+	       newText ("<p> Puiul de dragon: Poate că este un câine. </p>")
+	       ,
+	       newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	       ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Foarte bine. Într-adevăr, umbra e a unui câine, a unuia din cei trei câini pe care i-ai văzut la început.</p>")
+	     ,
+	       newImage ("threedogs.png")
+               .print ()
+	       ,
+	       newKey(" ")
+        .wait()
+	       
+	      )
+;
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Uite, câinele galben a revenit în faţa cortinei, dar umbra este încă acolo, în lumina reflectoarelor.</p>")
+	          ,        
+	       newText ("<p> Deci umbra nu este câinele galben! </p>")
+	       ,
+	     newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
+               .print ()
+	       ,
+	       	newAudio("barking", "barking.mp3")
+		.play()
+	       ,
+	       newKey(" ")
+        .wait()
+	       
+	      )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newText ("<p> Hai să vedem ce zice puiul de dragon despre umbră. </p>")
+	       ,
+		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
+               .print ()
+		,
+		newAudio("barking", "barking.mp3")
+		.play()
+		,
+		newText ("<p> Puiul de dragon: Poate că este câinele roşu.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+			 ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Sigur că este câinele roşu. </p>")
+		,
+	        newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	       ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Poate că este câinele galben.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	       ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Sigur că este câinele galben.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	       ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Sigur că este câinele albastru.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Poate că este câinele albastru.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Uite, câinele roşu a revenit în faţa cortinei, alăturându-se câinelui galben, dar umbra este încă acolo, în lumina reflectoarelor</p>")
+	         ,        
+	       newText ("<p> Deci umbra nu este câinele roşu! Şi nu este câinele galben! </p>")
+	         ,         
+	     newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
+               .print ()
+	       ,
+	       	newAudio("barking", "barking.mp3")
+		.play()
+	       ,
+	       newKey(" ")
+        .wait()
+	       
+	      )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
+               .print ()
+		,
+		newAudio("barking", "barking.mp3")
+		.play()
+		,
+		newText ("<p> Hai acum să vedem ce zice puiul de dragon despre umbră. </p>")
+		,
+		newText ("<p> Puiul de dragon: Sigur că este câinele roşu.</p>")
+		,
+		newText ("<p> Cum vei răsplăti puiul de dragon? </p>")
+		,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
+               .print ()
+		,
+		newAudio("barking", "barking.mp3")
+		.play()
+		,
+		newText ("<p> Puiul de dragon: Sigur că este câinele albastru.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+
+
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
+               .print ()
+		,
+	
+		newText ("<p> Puiul de dragon: Poate că este câinele albastru.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+		
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController ("experiment",
+		defaultText
+	        .print(),
+		newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
+               .print ()
+		,
+		newText ("<p> Puiul de dragon: Poate că este câinele roşu.</p>")
+		,
+		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
+	        ,
+	       newImage("bigapple", "bigapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newImage("smallapple", "smallapple.png")
+        .settings.size(200,200)
+        // .print()
+    ,
+    newCanvas(450,200)
+        .settings.add( 0 , 0 , getImage("bigapple") )
+        .settings.add( 250 , 0 , getImage("smallapple") )
+        .print()
+	       ,
+	       // newKey("FJ")
+newSelector()
+    .settings.add( getImage("bigapple") , getImage("smallapple") )
+    .settings.keys(          "F"    ,          "J"   )
+    .settings.log()
+    .wait()
+)
+.log( "ID" , getVar("ID") )
+;
+PennController("experiment" ,
+	    defaultText
+	        .print(),
+	       newText ("<p> Hai acum să vedem a cui este umbra. Pam-pam! Este câinele albastru! </p>")
+	         ,         
+	     newImage ("bluedogonstage.jpg")
+               .print ()
+	       ,
+	       	newAudio("barking", "barking.mp3")
+		.play()
+	       ,
 	       newKey(" ")
         .wait()
 	       
@@ -1449,1183 +2621,9 @@ PennController("experiment" ,
 )
 ;
 
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Hai să trecem acum la grupul broaştelor. </p>")
-	    ,
-	                  
-	     newImage ("threefrogs.png")
-               .print ()
-	       ,
-	       newAudio("frogsounds2sec", "frogsounds2sec.mp3")
-		.play()
-		,
-	       newKey(" ")
-        .wait()
-	       
-	      )	
-;
-PennController("experiment" ,
-	    defaultText
-	        .print()
-	       ,
-  newText ("<p> Toate broaştele s-au dus acum în spatele cortinei. <p>")
-	       ,
-  newText ("<p> Puiul de dragon trebuie să descrie a cui crede el că este umbra. </p>")
-	       ,
-   newText ("<p> Când puiul de dragon oferă cea mai bună descriere, trebuie să-l recompensezi cu un măr mare. </p>"), 
-   newText ("<p> Atunci când puiul de dragon nu oferă cea mai bună descriere, îi dai doar un măr mic. </p>")
-,
-	      newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       newKey(" ")
-        .wait()
-)
-;	
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newText ("<p> Hai să vedem ce spune puiul de dragon despre umbră.</p>")
-		,
-		newImage ("frogshadowallfrogs", "frogshadowallfrogs.png")
-               .print ()
-		,
-		newAudio("frogsounds2sec", "frogsounds2sec.mp3")
-		.play()
-		,
-
-		newText ("<p> Puiul de dragon: Poate că este un câine. </p>")
-	       ,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-		
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowallfrogs", "frogshadowallfrogs.png")
-               .print ()
-		,
-
-		newText ("<p> Puiul de dragon: Sigur că este o broască. </p>")
-	       ,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowallfrogs", "frogshadowallfrogs.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Sigur că este un câine. </p>")
-	       ,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowallfrogs", "frogshadowallfrogs.png")
-               .print ()
-		,
-
-		newText ("<p> Puiul de dragon: Poate că este o broască. </p>")
-	       ,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Foarte bine. Într-adevăr, umbra e a unei broaşte, a uneia din cele trei broaşte pe care le-ai văzut la început..</p>")
-	         ,         
-	     newImage ("threefrogs.png")
-               .print ()
-	       ,
-	       newKey(" ")
-        .wait()
-	       
-	      )
-;
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Uite, broasca albastră a revenit în faţa cortinei, dar umbra este încă acolo, în lumina reflectoarelor. </p>")
-	          ,  
-	       newText ("<p> Deci umbra nu este broasca albastră! </p>")
-	       ,
-	     newImage ("frogshadowonefrogonstage","frogshadowonefrogonstage.png")
-               .print ()
-	       ,
-	       newAudio("frogsounds2sec", "frogsounds2sec.mp3")
-		.play(),
-	       
-	       newKey(" ")
-        .wait()
-	       
-	      )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newText ("<p> Hai să vedem ce spune puiul de dragon despre umbră. </p>")
-	       ,
-		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
-               .print ()
-		,
-		newAudio("frogsoundsshort", "frogsoundsshort.mp3")
-		.play()
-		,
-		newText ("<p> Puiul de dragon: Sigur că este broasca mov.</p>")
-		,
-		newText ("<p> Cum vei răsplăti puiul de dragon? </p>")
-			 ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Poate că este broasca roşie.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Sigur că este broasca albastră.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
-               .print ()
-		,
-
-		newText ("<p> Puiul de dragon: Poate că este broasca mov.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowonefrogonstage", "frogshadowonefrogonstage.png")
-               .print ()
-	
-		,
-		newText ("<p> Puiul de dragon: Sigur că este broasca roşie.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowonefrogonstage","frogshadowonefrogonstage.png" )
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Poate că este broasca albastră.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Uite, broasca mov a revenit în faţa cortinei, alăturându-se broaştei albastre, dar umbra este încă acolo, în lumina reflectoarelor. </p>")
-	         ,         
-	       newText ("<p> Deci umbra nu este broasca mov! Şi nu este broasca albastră! </p>")
-	       ,
-	     newImage ("frogshadowtwofrogsonstage", "frogshadowtwofrogsonstage.png")
-               .print ()
-	       ,
-	       newAudio("frogsoundsshort", "frogsoundsshort.mp3")
-		.play()
-	       ,
-	       newKey(" ")
-        .wait()
-	       
-	      )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newText ("<p> Hai să vedem ce spune puiul de dragon despre umbră. </p>")
-		,
-		newImage ("frogshadowtwofrogsonstage", "frogshadowtwofrogsonstage.png")
-               .print ()
-		,
-		newAudio("frogsounds2sec", "frogsounds2sec.mp3")
-		.play()
-		,
-		newText ("<p> Puiul de dragon: Poate că este broasca mov.</p>")
-		,
-		newText ("<p> Cum vei răsplăti puiul de dragon? </p>")
-		,	 
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowtwofrogsonstage", "frogshadowtwofrogsonstage.png")
-               .print ()
-		,
-
-		newText ("<p> Puiul de dragon: Sigur că este broasca mov.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowtwofrogsonstage", "frogshadowtwofrogsonstage.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Poate că este broasca roşie.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("frogshadowtwofrogsonstage","frogshadowtwofrogsonstage.png")
-               .print ()
-		,
-		
-		newText ("<p> Puiul de dragon: Sigur că este broasca roşie. </p>")
-	       ,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Hai acum să vedem a cui este umbra. Pam-pam! Este broasca roşie! </p>")
-	         ,         
-	     newImage ("redfrogrevealedonstage.jpg")
-               .print ()
-	       ,
-	       newAudio("frogsounds2sec", "frogsounds2sec.mp3")
-		.play(),
-	       
-	       newKey(" ")
-        .wait()
-	       
-)
-;
-
-
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Hai să trecem mai departe la grupul câinilor. </p>")
-	    ,
-	                  
-	     newImage ("threedogs.png")
-               .print ()
-	       ,
-	       newAudio("barking", "barking.mp3")
-		.play()
-		,
-	       newKey(" ")
-        .wait()
-	       
-	      )	
-;
-PennController("experiment" ,
-	    defaultText
-	        .print()
-	       ,
-  newText ("<p> Toţi câinii s-au dus acum în spatele cortinei. <p>")
-	       ,
-  newText ("<p> Puiul de dragon trebuie să descrie a cui crede el că este umbra. </p>")
-	       ,
-   newText ("<p> Când puiul de dragon oferă cea mai bună descriere, trebuie să-l recompensezi cu un măr mare. </p>"), 
-   newText ("<p> Atunci când puiul de dragon nu oferă cea mai bună descriere, îi dai doar un măr mic. </p>")
-,
-	      newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       newKey(" ")
-        .wait()
-)
-;	
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newText ("<p> Hai să vedem ce spune puiul de dragon despre umbră.</p>")
-		,
-		newImage ("dogshadowalldogs", "dogshadowalldogs.png")
-               .print ()
-		,
-		newAudio("barking", "barking.mp3")
-		.play()
-		,
-
-		newText ("<p> Puiul de dragon: Sigur că este un câine. </p>")
-	       ,
-	        newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	       ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-		
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowalldogs", "dogshadowalldogs.png")
-               .print ()
-		,
-	
-		newText ("<p> Puiul de dragon: Poate că este o pisică. </p>")
-	       ,
-	      newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	       ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowalldogs", "dogshadowalldogs.png")
-               .print ()
-		,
-
-	       newText ("<p> Puiul de dragon: Sigur că este o pisică. </p>")
-	       ,
-	       newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	       ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowalldogs", "dogshadowalldogs.png")
-               .print ()
-		,
-
-	       newText ("<p> Puiul de dragon: Poate că este un câine. </p>")
-	       ,
-	       newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	       ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Foarte bine. Într-adevăr, umbra e a unui câine, a unuia din cei trei câini pe care i-ai văzut la început.</p>")
-	     ,
-	       newImage ("threedogs.png")
-               .print ()
-	       ,
-	       newKey(" ")
-        .wait()
-	       
-	      )
-;
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Uite, câinele galben a revenit în faţa cortinei, dar umbra este încă acolo, în lumina reflectoarelor.</p>")
-	          ,        
-	       newText ("<p> Deci umbra nu este câinele galben! </p>")
-	       ,
-	     newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
-               .print ()
-	       ,
-	       	newAudio("barking", "barking.mp3")
-		.play()
-	       ,
-	       newKey(" ")
-        .wait()
-	       
-	      )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newText ("<p> Hai să vedem ce zice puiul de dragon despre umbră. </p>")
-	       ,
-		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
-               .print ()
-		,
-		newAudio("barking", "barking.mp3")
-		.play()
-		,
-		newText ("<p> Puiul de dragon: Poate că este câinele roşu.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-			 ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Sigur că este câinele roşu. </p>")
-		,
-	        newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	       ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Poate că este câinele galben.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	       ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Sigur că este câinele galben.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	       ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Sigur că este câinele albastru.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowonedogonstage", "dogshadowonedogonstage.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Poate că este câinele albastru.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Uite, câinele roşu a revenit în faţa cortinei, alăturându-se câinelui galben, dar umbra este încă acolo, în lumina reflectoarelor</p>")
-	         ,        
-	       newText ("<p> Deci umbra nu este câinele roşu! Şi nu este câinele galben! </p>")
-	         ,         
-	     newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
-               .print ()
-	       ,
-	       	newAudio("barking", "barking.mp3")
-		.play()
-	       ,
-	       newKey(" ")
-        .wait()
-	       
-	      )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
-               .print ()
-		,
-		newAudio("barking", "barking.mp3")
-		.play()
-		,
-		newText ("<p> Hai acum să vedem ce zice puiul de dragon despre umbră. </p>")
-		,
-		newText ("<p> Puiul de dragon: Sigur că este câinele roşu.</p>")
-		,
-		newText ("<p> Cum vei răsplăti puiul de dragon? </p>")
-		,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
-               .print ()
-		,
-		newAudio("barking", "barking.mp3")
-		.play()
-		,
-		newText ("<p> Puiul de dragon: Sigur că este câinele albastru.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-
-
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
-               .print ()
-		,
-	
-		newText ("<p> Puiul de dragon: Poate că este câinele albastru.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-		
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController ("experiment",
-		defaultText
-	        .print(),
-		newImage ("dogshadowtwodogsonstage", "dogshadowtwodogsonstage.png")
-               .print ()
-		,
-		newText ("<p> Puiul de dragon: Poate că este câinele roşu.</p>")
-		,
-		newText ("<p> Cum vei răsplati puiul de dragon? </p>")
-	        ,
-	       newImage("bigapple", "bigapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newImage("smallapple", "smallapple.png")
-        .settings.size(200,200)
-        // .print()
-    ,
-    newCanvas(450,200)
-        .settings.add( 0 , 0 , getImage("bigapple") )
-        .settings.add( 250 , 0 , getImage("smallapple") )
-        .print()
-	       ,
-	       // newKey("FJ")
-newSelector()
-    .settings.add( getImage("bigapple") , getImage("smallapple") )
-    .settings.keys(          "F"    ,          "J"   )
-    .settings.log()
-    .wait()
-)
-.log( "ID" , getVar("ID") )
-;
-PennController("experiment" ,
-	    defaultText
-	        .print(),
-	       newText ("<p> Hai acum să vedem a cui este umbra. Pam-pam! Este câinele albastru! </p>")
-	         ,         
-	     newImage ("bluedogonstage.jpg")
-               .print ()
-	       ,
-	       	newAudio("barking", "barking.mp3")
-		.play()
-	       ,
-	       newKey(" ")
-        .wait()
-	       
-)
-;
 PennController.SendResults( "send" );
 PennController( "final" ,
-    newText("<p> Mulţumesc pentru participare! Codul chestionarului pentru MTurk este: kp5t7r. Te rog fă copy-paste acestui cod în MTurk!</p>") 
+    newText("<p> Mulţumesc pentru participare! Codul chestionarului pentru MTurk este: kp5t9r. Te rog fă copy-paste acestui cod în MTurk!</p>") 
 	       .print()
 	       ,
 	 newText("<p> Puiul de dragon îţi mulţumeşte pentru mere şi la fel şi vrăjitorul! Pa-pa! </p>")
